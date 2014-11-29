@@ -1,0 +1,46 @@
+Ian Neal
+CSE 353
+Project 2
+
+
+NetworkingProject2.cpp is the OLD implementation
+Project2.cpp is the NEW implementation
+
+
+Checklist:
+Feature                                                 Status/Description
+-------                                                 -------
+Load input file                                         complete
+Parse input file                                        complete
+Generate token                                          complete
+Generate frame                                          complete
+Node runs as an autonomous thread                       complete
+All nodes terminate                                     can't tell; hasn't run to completion
+follow the command line to execute the program          complete
+randomly accept a frame                                 complete
+extract all fields from a frame                         can't tell; hasn't run to completion (seems to not be passing tokens... Bah)
+switch between listen and transmit states               incomplete; seems to not be passing tokens?
+pass the tokens and frames to next neighbor             incomplete; can't tell what's wrong
+print to the output with the correct format             can't tell; hasn't gotten to output anything
+documentation                                           partly missing; much of the code is self-explanatory, much is commented
+executable files                                        complete
+monitor detects lost token                              incomplete (mostly missing)
+monitor cleans up garbled frames                        missing
+monitor detects orphaned frames                         complete (though can't tell if it's working)
+
+optional extra credit work:
+  binary frame                                          complete; can't quite tell if it's working
+  thread synchronization                                complete; can't tell if it's working
+
+
+Make instructions:
+Use provided makefile (that is, simply run `make`) on a TCC Linux machine
+
+Known bugs:
+Doesn't... transmit? Doesn't receive properly? I can't tell.
+
+Token holding time:
+665 byes; this is five AVERAGE frames (half-sized DATA), which is still more than one max-sized frame.
+
+Garbled frame simulation:
+Unfortunately, unimplemented.
