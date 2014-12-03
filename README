@@ -1,46 +1,58 @@
 Ian Neal
 CSE 353
-Project 2
-
-
-NetworkingProject2.cpp is the OLD implementation
-Project2.cpp is the NEW implementation
+Project 3
 
 
 Checklist:
-Feature                                                 Status/Description
--------                                                 -------
-Load input file                                         complete
-Parse input file                                        complete
-Generate token                                          complete
-Generate frame                                          complete
-Node runs as an autonomous thread                       complete
-All nodes terminate                                     can't tell; hasn't run to completion
-follow the command line to execute the program          complete
-randomly accept a frame                                 complete
-extract all fields from a frame                         can't tell; hasn't run to completion (seems to not be passing tokens... Bah)
-switch between listen and transmit states               incomplete; seems to not be passing tokens?
-pass the tokens and frames to next neighbor             incomplete; can't tell what's wrong
-print to the output with the correct format             can't tell; hasn't gotten to output anything
-documentation                                           partly missing; much of the code is self-explanatory, much is commented
-executable files                                        complete
-monitor detects lost token                              incomplete (mostly missing)
-monitor cleans up garbled frames                        missing
-monitor detects orphaned frames                         complete (though can't tell if it's working)
+Feature                                                                     Status/Description
+-------                                                                     -------
+Multiple executables (each subnet has its own executable)                   missing
+Configuration file loading and parsing                                      missing
+Construct all the networks specified in the configuration file              missing
+Join the bridge into all the token sub networks                             missing
+Successful frame buffering in bridge                                        missing
+Bridge successfully transports non-local traffic across sub-networks        missing
+All nodes and networks shut down after all the data has been transmitted    missing
+Bridge creates log file                                                     missing
+Program loads input file                                                    complete
+Program parses input file                                                   complete
+Program generates tokens (one for each ring)                                partial
+Nodes generate proper frames                                                partial
+Nodes run as autonomous threads                                             complete
+Program can be executed via command line                                    complete - doesn't exit
+Randomly accept a frame                                                     complete - doesn't do all
+Extract all fields from a frame                                             complete - doesn't do all
+Nodes switch between listen and transmit states                             complete - doesn't do all
+Pass the tokens and frames to the next neighbor                             incomplete - sometimes doesn't work
+Print to the output file with the correct format                            complete - doesn't do all
+Documentation is complete                                                   incomplete
+Well documented code                                                        incomplete
 
 optional extra credit work:
-  binary frame                                          complete; can't quite tell if it's working
-  thread synchronization                                complete; can't tell if it's working
-
+    Binary frame                                                            complete - can't quite tell if it's working
+    thread sunchronization                                                  complete - can't quite tell if it's working
+    Different maximum allowable frame size                                  incomplete
 
 Make instructions:
 Use provided makefile (that is, simply run `make`) on a TCC Linux machine
 
 Known bugs:
-Doesn't... transmit? Doesn't receive properly? I can't tell.
 
-Token holding time:
-665 byes; this is five AVERAGE frames (half-sized DATA), which is still more than one max-sized frame.
 
-Garbled frame simulation:
-Unfortunately, unimplemented.
+File descriptions:
+
+
+Bridge buffer synchronization method:
+
+
+Method for communicating socket numbers to bridge:
+
+
+Estimated runtimes:
+10 nodes:   
+25 nodes:   
+50 nodes:   
+100 nodes:  
+
+Other information for potential partial credit:
+
